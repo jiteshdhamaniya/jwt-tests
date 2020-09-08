@@ -5,7 +5,7 @@
     "require": {
         "tymon/jwt-auth": "1.0"
     },
-    "license": "GNU",
+    "license": "MIT",
     "authors": [
         {
             "name": "Jitesh",
