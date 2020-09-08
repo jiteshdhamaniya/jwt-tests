@@ -1,0 +1,28 @@
+{
+    "name": "jiteshdhamaniya/jwt-tests",
+    "type": "library",
+    "description": "Tests for laravel JWT auth tymon/jwt-auth",
+    "require": {
+        "tymon/jwt-auth": "1.0"
+    },
+    "license": "GNU",
+    "authors": [
+        {
+            "name": "Jitesh",
+            "email": "jitesh@jdsoftvera.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "JiteshDhamaniya\\JWTTests\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JiteshDhamaniya\\JWTTests\\JWTTestsServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev"
+}
