@@ -1,8 +1,6 @@
 # Laravel JWT Tests Package for tymon/jwt-auth
 [![GitHub issues](https://img.shields.io/github/issues/jiteshdhamaniya/jwt-tests)](https://packagist.org/packages/jiteshdhamaniya/jwt-tests)
-
 [![GitHub Forks](https://img.shields.io/github/forks/jiteshdhamaniya/jwt-tests)](https://packagist.org/packages/jiteshdhamaniya/jwt-tests)
-
 [![GitHub Stars](https://img.shields.io/github/stars/jiteshdhamaniya/jwt-tests)](https://packagist.org/packages/jiteshdhamaniya/jwt-tests)
 
 ## Installation
