@@ -12,7 +12,8 @@ class JWTTestsMakeCommand extends Command
      * @var string
      */
     protected $signature = 'make:jwt-tests
-    {--f|force : Overwrite existing tests}';
+    {--f|force : Overwrite existing tests}
+    {--endpoint=default : Update API Endpoint}';
 
 
     /**
@@ -97,19 +98,24 @@ class JWTTestsMakeCommand extends Command
     {
         $content = file_get_contents($stubPath);
 
+        $newEndpoint = $this->option('endpoint');
+
+        if ($this->option('endpoint')!="default") {
+            $content = $this->updateEndpoint($content, $newEndpoint);
+        }
+
         file_put_contents($destinationTest, $content);
     }
 
     /**
-     * Get test in snake_case format.
+     * Replace endpoint in Test.
      *
      * @return string
      */
-    public function snakeCase($stub)
+    public function updateEndpoint($stub,$newEndpoint)
     {
-        return preg_replace_callback('/    public function test.+/', function ($matches) {
-            return strtolower(preg_replace('/([A-Z])/', '_$0', $matches[0]));
-        }, $stub);
+        $endPoint = '/api';
+        return str_replace($endPoint, $newEndpoint, $stub);
     }
 
 }
